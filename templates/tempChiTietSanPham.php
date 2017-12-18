@@ -28,7 +28,7 @@
                 if(isset($_SESSION["maTaiKhoan"]))
                 {
                     ?>
-                        <a href="index.php?a=9&id=<?php echo $maSanPham; ?>">
+                        <a href="index.php?a=12&id=<?php echo $maSanPham; ?>">
                             <img src="img/shopping_cart.png" width="32">
                         </a>
                     <?php

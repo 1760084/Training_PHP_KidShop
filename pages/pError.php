@@ -11,6 +11,9 @@
             case 2:
                 echo "Bạn không có quyền truy cập chức năng này";
                 break;
+            case 3:
+                echo "Thiếu thông tin để thực hiện chức năng này";
+                break;
             case 4:
                 echo "Tên đăng nhập hoặc mật khẩu bị sai";
                 break;

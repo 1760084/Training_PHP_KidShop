@@ -14,11 +14,20 @@
         case 4:
             include ("pages/pChiTietSanPham.php");
             break;
+        case 6:
+            include ("pages/pQuanLyGioHang.php");
+            break;
         case 10:
             include ("pages/exDangNhap.php");
             break;
         case 11:
             include ("pages/exDangXuat.php");
+            break;
+        case 12:
+            include ("pages/exThemSanPhamVaoGioHang.php");
+            break;
+        case 13:
+            include ("pages/exCapNhatGioHang.php");
             break;
         default:
             include "pages/pError.php";
