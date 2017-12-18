@@ -13,3 +13,5 @@
     * a = 7: thanh toán
     * a = 8: đăng ký tài khoản
     * a = 9: xử lý thêm sản phẩm vào giỏ hàng
+    * a = 10: xử lý đăng nhập
+    * a = 11: xử lý đăng xuất
