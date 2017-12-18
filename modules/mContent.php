@@ -11,7 +11,9 @@
         case 3: 
             include ("pages/pSanPhamTheoLoai.php");
             break;
-        
+        case 4:
+            include ("pages/pChiTietSanPham.php");
+            break;
         default:
             include "pages/pError.php";
             break;
