@@ -9,7 +9,7 @@
         </div>
         <div>
             <span class="label">Giá:</span>
-            <span class="price"><?php echo $GiaSanPham ?> đ</span>
+            <span class="price"><?php echo number_format($GiaSanPham, 0, ',', '.');?>đ</span>
         </div>
         <div>
             <span class="label">Hãng sản xuất:</span>
