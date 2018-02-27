@@ -1,25 +1,21 @@
 <h1>
-    <?php
-        $id = 1;
-        if(isset($_GET['id']))
-            $id = $_GET['id'];
-        switch ($id)
-        {
-            case 1:
-                echo "Chức năng không hỗ trợ";
-                break;
-            case 2:
-                echo "Bạn không có quyền truy cập chức năng này";
-                break;
-            case 3:
-                echo "Thiếu thông tin để thực hiện chức năng này";
-                break;
-            case 4:
-                echo "Tên đăng nhập hoặc mật khẩu bị sai";
-                break;
-            default:
-                echo "Quậy hả BƯỞI !!!";
-        }
-    ?>
+<?php
+    $errID = 0;
+    if(isset($_GET['id']))
+        $errID = $_GET['id'];
+
+    switch($errID)
+    {
+        case 1:
+            echo "Tên đăng nhập hoặc mật khẩu không đúng";
+            break;
+        case 2: 
+            echo "Chưa chọn sản phẩm để bỏ vào giỏ hàng";
+            break;
+        case 3:
+            break;
+        default:
+            echo "Chức năng chưa hỗ trợ";
+    }
+?>
 </h1>
-<img src='images/error.jpg' width="98%" />

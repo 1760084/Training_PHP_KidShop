@@ -1,20 +1,14 @@
 <?php
-    include_once "lib/config.php";
-    
-    class DataProvider
-    {
-        public static function ExecuteQuery($sql)
-        {
-            global $db_host, $db_username, $db_password, $db_name;
-
-            $connection = mysqli_connect($db_host, $db_username, $db_password, $db_name) or
-			die ("couldn't connect to localhost");				
-            mysqli_query($connection, "set names 'utf8'");
-            $result = mysqli_query($connection, $sql);
-            mysqli_close($connection);
+    class DataProvider {
+        public static function ExecuteQuery($sql) {
+            $connect = mysqli_connect('localhost', 'root', 'root', 'BabyShop') 
+                or die('Cannot connect DB');
+            mysqli_query($connect, "set names 'utf-8'");
+            $result = mysqli_query($connect, $sql);
+            mysqli_close($connect);
             return $result;
         }
-
+        
         public static function ChangeURL($path)
         {
             echo '<script type = "text/javascript">';

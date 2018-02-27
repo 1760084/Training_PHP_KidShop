@@ -1,7 +1,6 @@
-<h2>Sản phẩm theo hãng</h2>
+<h2>Sản phẩm mới nhất</h2>
 <?php
-    $id = $_GET["id"];
-    $sql = "SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham FROM SanPham WHERE BiXoa = false AND MaHangSanXuat = $id";
+    $sql = 'SELECT MaSanPham, TenSanPham, HinhURL, GiaSanPham FROM SanPham WHERE BiXoa = false ORDER BY NgayNhap DESC LIMIT 0, 4';
     $result = DataProvider::ExecuteQuery($sql);
     while($row = mysqli_fetch_array($result))
     {

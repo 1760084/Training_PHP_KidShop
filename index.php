@@ -1,12 +1,11 @@
-<?php 
+<?php
 	session_start();
-	if(isset($_GET["a"]) && $_GET["a"] != 0 && $_GET["a"] > 10)
-		$_SESSION["curURL"] = $_SERVER["REQUEST_URI"];
+	include_once('lib/DataProvider.php');
+	include_once('lib/GioHang.php');
 	
-	include_once ('lib/DataProvider.php'); 
-	include_once ('lib/ShoppingCart.php');
+	if((isset($_GET['a']) && $_GET['a'] < 100) || isset($_GET['a']) == false)
+		$_SESSION['curURL'] = $_SERVER['REQUEST_URI'];
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,17 +16,59 @@
 
 <body>
 	<div id="wrapper">
-		<?php include ('modules/mHeader.php'); ?>
+		<div id="header">
+        	<?php include_once('modules/mHeader.php'); ?>
+		</div>
 		<div id="sidebar">
-			<?php include ('modules/mMenuHang.php'); ?>
-            <?php include ('modules/mMenuLoai.php'); ?>
+			<?php include_once('modules/mHangSanXuat.php'); ?>
+            <?php include_once('modules/mLoaiSanPham.php'); ?>
 		</div>
 		<div id="content">
-			<?php include ('modules/mContent.php'); ?>
+			<?php
+				$a = 1;
+				if(isset($_GET['a']))
+					$a = $_GET['a'];
+
+				switch($a)
+				{
+					case 1:
+						include_once('pages/pIndex.php');
+						break;
+					case 2:
+						include_once('pages/pSanPhamTheoHang.php');
+						break;
+					case 3:
+						include_once('pages/pSanPhamTheoLoai.php');
+						break;
+					case 4:
+						include_once('pages/pChiTiet.php');
+						break;
+					case 5:
+						include_once('pages/GioHang/pDanhSachGioHang.php');
+						break;
+					case 6: 
+						include_once('pages/GioHang/exCapNhatSoLuong.php');
+						break;
+					case 101:
+						include_once('modules/DangNhap/exFormDangNhap.php');
+						break;
+					case 102: 
+						include_once('modules/DangNhap/exFormThongTinTaiKhoan.php');
+						break;
+					case 103:
+						include_once('pages/GioHang/exThemSanPhamVaoGioHang.php');
+						break;
+					default:
+						include_once('pages/pError.php');
+				}
+			?>
 		</div>
 		<div id="footer">
-            <?php include ('modules/mFooter.php'); ?>
+			<?php include_once('modules/mFooter.php'); ?>			
 		</div>
 	</div>	
 </body>
 </html>
+
+
+
