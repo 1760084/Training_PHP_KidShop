@@ -47,7 +47,7 @@
 						include_once('pages/GioHang/pDanhSachGioHang.php');
 						break;
 					case 6: 
-						include_once('pages/GioHang/exCapNhatSoLuong.php');
+						include_once('pages/GioHang/pThongBaoDatHangThanhCong.php');
 						break;
 					case 101:
 						include_once('modules/DangNhap/exFormDangNhap.php');
@@ -57,6 +57,12 @@
 						break;
 					case 103:
 						include_once('pages/GioHang/exThemSanPhamVaoGioHang.php');
+						break;
+					case 104:
+						include_once('pages/GioHang/exCapNhatSoLuong.php');
+						break;
+					case 105:
+						include_once('pages/GioHang/exDatHang.php');
 						break;
 					default:
 						include_once('pages/pError.php');

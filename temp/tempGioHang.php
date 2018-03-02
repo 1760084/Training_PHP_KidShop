@@ -1,4 +1,4 @@
-<form name="frmGioHang" action="index.php?a=6" method="post">
+<form name="frmGioHang" action="index.php?a=104" method="post">
     <tr>
         <td><?php echo $stt; ?></td>
         <td><?php echo $tenSanPham; ?></td>

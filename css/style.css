@@ -63,6 +63,10 @@ body{
 	text-align:right;
 }
 
+#login_nav a{
+	color: #fff !important;
+}
+
 a{
 	text-decoration: none;		/* bỏ gạch chân cho link */
 }

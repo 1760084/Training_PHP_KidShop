@@ -10,6 +10,10 @@
             <th width="50">Thao tác</th>
         </tr>
         <?php
+            if(isset($_SESSION['MaTaiKhoan']) == false){
+                DataProvider::ChangeURL("index.php");    
+            }
+
             if(isset($_SESSION['GioHang']))
             {
                 $stt = 1;
@@ -36,13 +40,15 @@
 
                     $stt++;
                 }
+
+                $_SESSION['TongThanhTien'] = $tongThanhTien;
             }
         ?>
     </table>
     <div class="pprice">
         Tổng thành tiền: <?php echo number_format($tongThanhTien, 0, ",",".") ; ?> đ
     </div>
-    <a href="#">
+    <a href="index.php?a=105">
         <img src="img/dathang.png" width="100">
     </a>
 </div>
