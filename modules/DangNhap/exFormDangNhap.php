@@ -12,9 +12,14 @@
         $_SESSION["TenHienThi"] = $row["TenHienThi"];
         $_SESSION["MaLoaiTaiKhoan"] = $row["MaLoaiTaiKhoan"];
 
-        $curURL = $_SESSION['curURL'];
-        //echo $curURL;
-        DataProvider::ChangeURL($curURL);
+        if($row['MaLoaiTaiKhoan'] == 2){
+            DataProvider::ChangeURL('./admin/index.php');
+        }
+        else
+        {
+            $curURL = $_SESSION['curURL'];
+            DataProvider::ChangeURL($curURL);
+        }
     }
     else {
         DataProvider::ChangeURL("index.php?a=0&id=1");
