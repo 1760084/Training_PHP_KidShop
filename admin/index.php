@@ -58,7 +58,7 @@
 		?>
 	</div>
 	<div id="footer">
-		&copy; 2015 - Thiết kế bởi học viên iNet
+		&copy; 2015 - Thiết kế bởi sinh viên Khoa Công nghệ Thông tin - ĐH KHTN Tp.HCM
 	</div>
 </body>
 </html>

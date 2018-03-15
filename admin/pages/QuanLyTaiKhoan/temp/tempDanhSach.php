@@ -15,7 +15,7 @@
     </td>
     <td><?php echo $TenLoaiTaiKhoan; ?></td>
     <td>
-        <a href="pages/qlTaiKhoan/exKhoa.php?id=<?php echo $MaTaiKhoan; ?>">
+        <a href="index.php?c=1&a=103&id=<?php echo $MaTaiKhoan; ?>">
             <img src="images/lock.png" />
         </a>
         <a href="index.php?c=1&a=2&id=<?php echo $MaTaiKhoan; ?>">
